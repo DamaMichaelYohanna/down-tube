@@ -5,6 +5,10 @@ import tkinter.messagebox as mbox
 #
 from pytube import YouTube
 
+
+window = tk.Tk()
+
+window.mainloop()
 #
 # # where to save
 # SAVE_PATH = os.getcwd()
