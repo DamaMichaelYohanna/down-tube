@@ -9,12 +9,11 @@ from pytube import YouTube
 window = tk.Tk()
 
 window.mainloop()
-#
-# # where to save
-# SAVE_PATH = os.getcwd()
-# # link of the video to be downloaded
-# link="https://www.youtube.com/watch?v=S4E4yAktjug"
-# print("i am here")
+
+SAVE_PATH = tk.filedialog.askopen()
+
+link="https://www.youtube.com/watch?v=S4E4yAktjug"
+
 #
 # try:
 # 	# object creation using YouTube
