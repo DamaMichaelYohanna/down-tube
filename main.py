@@ -13,7 +13,12 @@ window.mainloop()
 SAVE_PATH = tk.filedialog.askopen()
 
 link="https://www.youtube.com/watch?v=S4E4yAktjug"
+class MainWindow(ttk.Frame):
+    def __init__(self, parent):
+        ttk.Frame.__init__(self, parent)
 
+    def build_ui(self):
+        pass
 #
 # try:
 # 	# object creation using YouTube
