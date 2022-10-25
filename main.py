@@ -25,11 +25,14 @@ class MainWindow(ttk.Frame):
         #--------------------------
         head_frame = tk.Frame(main_frame, bg='white')
         head_frame.grid()
+        tk.Label(head_frame, text='Down-Tube',
+                 bg='white', ).grid(pady=20)
         #-------------------------
         body_frame = tk.Frame(main_frame, bg='white')
         body_frame.grid()
-        tk.Label(body_frame, text='Download All you want',
-                 font='matura 16 bold', fg='purple').grid()
+        tk.Label(body_frame, text='Download All Your Youtube Videos With One Click',
+                 font='matura 16 bold',
+                 fg='purple').grid(pady=10, padx=100)
 
 MainWindow(window)
 window.mainloop()
