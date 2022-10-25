@@ -8,8 +8,6 @@ from pytube import YouTube
 
 window = tk.Tk()
 
-window.mainloop()
-
 ##SAVE_PATH = tk.filedialog.askopen()
 
 link="https://www.youtube.com/watch?v=S4E4yAktjug"
@@ -19,7 +17,7 @@ class MainWindow(ttk.Frame):
         self.parent = parent
         self.parent.title("Down Tube")
         self.parent.resizable(0, 0)
-        self.buid_ui()
+        self.build_ui()
 
     def build_ui(self):
         main_frame = tk.Frame(self.parent,bg='white')
@@ -32,7 +30,9 @@ class MainWindow(ttk.Frame):
         body_frame.grid()
         tk.Label(body_frame, text='Download All you want',
                  font='matura 16 bold', fg='purple').grid()
-        pass
+
+MainWindow(window)
+window.mainloop()
 #
 # try:
 # 	# object creation using YouTube
