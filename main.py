@@ -30,10 +30,19 @@ class MainWindow(ttk.Frame):
         #-------------------------
         body_frame = tk.Frame(main_frame, bg='white')
         body_frame.grid()
-        tk.Label(body_frame, text='Download All Your Youtube Videos With One Click',
-                 font='matura 16 bold',
+        tk.Label(body_frame, text='Download All Your Youtube Videos',
+                 font='alef 19 bold', bg='white',
                  fg='purple').grid(pady=10, padx=100)
-
+        tk.Label(body_frame, text="you are just one click away from your download",
+                 bg='white', font='alef 12').grid(pady=2)
+        tk.Label(body_frame, text="Drop the url below",
+                 bg='white', font='alef 12').grid(pady=2)
+        url_var = tk.StringVar()
+        tk.Entry(body_frame, textvariable=url_var,
+                 bg='white', font='matura 18').grid(pady=5, ipady=2)
+        tk.Button(body_frame, text='Download Video',
+                  bg='light green',
+                  font='alef 12 bold').grid(ipadx=20, pady=10)
 MainWindow(window)
 window.mainloop()
 #
