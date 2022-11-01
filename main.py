@@ -42,8 +42,12 @@ class MainWindow(ttk.Frame):
         tk.Label(body_frame, text="Drop the url below",
                  bg='white', font='alef 12').grid(pady=2)
         url_var = tk.StringVar()
-        tk.Entry(body_frame, textvariable=url_var,
-                 bg='white', font='matura 18').grid(pady=5, ipady=2)
+        input_area = tk.Entry(body_frame, textvariable=url_var,validate="key",
+                 bg='white', font='matura 18', validatecommand=self.load_video)
+        input_area.grid(pady=5, ipady=2)
+        
+        
+        
         tk.Button(body_frame, text='Download Video',
                   bg='#FF6699',
                   font='alef 12 bold').grid(ipadx=20, pady=10)
@@ -57,7 +61,9 @@ class MainWindow(ttk.Frame):
         webbrowser.Erroropen(self.url)
 
     def load_video(self):
+        print("function loaded")
         video = YouTube('https://youtu.be/2lAe1cqCOXo')
+        print("done")
         
             
 MainWindow(window, link)
