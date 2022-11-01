@@ -57,7 +57,8 @@ class MainWindow(ttk.Frame):
         webbrowser.Erroropen(self.url)
 
     def load_video(self):
-        pass
+        video = YouTube('https://youtu.be/2lAe1cqCOXo')
+        
             
 MainWindow(window, link)
 window.mainloop()
