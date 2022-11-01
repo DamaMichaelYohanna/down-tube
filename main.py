@@ -2,6 +2,7 @@ import os
 import tkinter as tk
 from tkinter import ttk
 import tkinter.messagebox as mbox
+import webbrowser
 #
 from pytube import YouTube
 
@@ -12,11 +13,12 @@ window = tk.Tk()
 
 link="https://www.youtube.com/watch?v=S4E4yAktjug"
 class MainWindow(ttk.Frame):
-    def __init__(self, parent):
+    def __init__(self, parent, url):
         ttk.Frame.__init__(self, parent)
         self.parent = parent
         self.parent.title("Down Tube")
         self.parent.resizable(0, 0)
+        self.url = url
         self.build_ui()
 
     def build_ui(self):
@@ -45,8 +47,12 @@ class MainWindow(ttk.Frame):
                   bg='#FF6699',
                   font='alef 12 bold').grid(ipadx=20, pady=10)
         tk.Button(body_frame, text="Or watch Video",
-                 bg='white', font='alef 12 underline', relief='flat',).grid(pady=2)
-MainWindow(window)
+                 bg='white', font='alef 12 underline', relief='flat',command=self.watch_online).grid(pady=2)
+        
+    def watch_online(self):
+        webbrowser.open(self.url)
+            
+MainWindow(window, link)
 window.mainloop()
 #
 # try:
