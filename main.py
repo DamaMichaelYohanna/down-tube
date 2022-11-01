@@ -49,11 +49,15 @@ class MainWindow(ttk.Frame):
                   font='alef 12 bold').grid(ipadx=20, pady=10)
         tk.Button(body_frame, text="Or watch Video",
                  bg='white', font='alef 12 underline', relief='flat',command=self.watch_online).grid(pady=2)
+        ttk.Separator(body_frame).grid(sticky='we')
         tk.Label(body_frame, image=self.image,
-                 bg='white', font='alef 12').grid(pady=2)
+                 bg='white', font='alef 12').grid(pady=0)
         
     def watch_online(self):
         webbrowser.Erroropen(self.url)
+
+    def load_video(self):
+        pass
             
 MainWindow(window, link)
 window.mainloop()
