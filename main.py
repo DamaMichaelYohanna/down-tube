@@ -62,8 +62,11 @@ class MainWindow(ttk.Frame):
 
     def load_video(self):
         print("function loaded")
-        video = YouTube('https://youtu.be/2lAe1cqCOXo')
+        self.video = YouTube('https://youtu.be/2lAe1cqCOXo')
         print("done")
+    def download_video(self):
+        """function to downlod youtube video"""
+        selfvideo.streams.first().download()
         
             
 MainWindow(window, link)
