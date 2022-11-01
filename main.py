@@ -86,11 +86,7 @@ print('about filtering')
 YouTube('https://youtu.be/2lAe1cqCOXo').streams.first().download()
 print('done filtering')
 
-#to set the name of the file
-# yt.set_filename('GeeksforGeeks Video')
 
-# get the video with the extension and
-# resolution passed in the get() function
 # d_video = yt.get(mp4files[-1].extension,mp4files[-1].resolution)
 # try:
 # 	# downloading the video
