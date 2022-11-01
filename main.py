@@ -39,7 +39,6 @@ class MainWindow(ttk.Frame):
                  bg='white', font='alef 12').grid(pady=2)
         tk.Label(body_frame, text="Drop the url below",
                  bg='white', font='alef 12').grid(pady=2)
-        ttk.Separator(body_frame, ).grid(sticky='we', pady=4, padx=30)
         url_var = tk.StringVar()
         tk.Entry(body_frame, textvariable=url_var,
                  bg='white', font='matura 18').grid(pady=5, ipady=2)
@@ -50,7 +49,7 @@ class MainWindow(ttk.Frame):
                  bg='white', font='alef 12 underline', relief='flat',command=self.watch_online).grid(pady=2)
         
     def watch_online(self):
-        webbrowser.open(self.url)
+        webbrowser.Erroropen(self.url)
             
 MainWindow(window, link)
 window.mainloop()
