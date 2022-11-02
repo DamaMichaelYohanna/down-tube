@@ -71,28 +71,8 @@ class MainWindow(ttk.Frame):
             
 MainWindow(window, link)
 window.mainloop()
-#
-# try:
-# 	# object creation using YouTube
-# 	# which was imported in the beginning
-# 	print('about trying it out')
-# 	yt = YouTube(link)
-# 	print('done trying')
-# except:
-# 	print("Connection Error") #to handle exception
-
 # filters out all the files with "mp4" extension
 print('about filtering')
 YouTube('https://youtu.be/2lAe1cqCOXo').streams.first().download()
 print('done filtering')
-
-
-# d_video = yt.get(mp4files[-1].extension,mp4files[-1].resolution)
-# try:
-# 	# downloading the video
-# 	stream = yt.streams.get_by_itag(22)
-# 	stream.download(SAVE_PATH)
-# except:
-# 	print("Some Error!")
-# print('Task Completed!')
 #
